@@ -1,3 +1,7 @@
+## Laravel 5 - CRUD Full example
+
+Version 1.0
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
