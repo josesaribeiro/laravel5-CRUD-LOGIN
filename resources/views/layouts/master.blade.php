@@ -16,6 +16,12 @@
     <div class="nav navbar-nav navbar-right">
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('tasks.index') }}">Tasks</a></li>
+        @if (Auth::guest())
+            <li><a href="{{ URL::route('auth/register') }}">Register</a></li>
+            <li><a href="{{ URL::route('auth/login') }}">Sign In</a></li>
+        @else
+            <li><a href="{{ URL::route('auth/logout') }}">Hi, {{{ Auth::user()->name}}} (Sign Out)</a></li>
+        @endif
     </div>
   </div>
 </nav>
