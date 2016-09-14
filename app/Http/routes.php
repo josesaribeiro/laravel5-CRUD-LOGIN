@@ -16,6 +16,8 @@ Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
 
 Route::group(['middleware' => 'auth'], function(){
     Route::resource('tasks', 'TasksController');
+    Route::get('documents/download/{id}', 'DocumentsController@download')->name('documents.download');
+    Route::resource('documents', 'DocumentsController');
 });
 
 Route::get('hello', 'Hello@index');
