@@ -5,23 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mandure</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-</head>
-<body>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 
-<nav class="navbar navbar-default">
+</head>
+<body style="background-color: #f8f8f8;">
+<nav class="navbar navbar-default" style="background-color: black;">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="{{ route('home') }}">Mandure</a>
+      <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ URL::asset('images/mandure.png') }}" style="margin-top: -13px;"></a>
     </div>
     <div class="nav navbar-nav navbar-right">
         @if (Auth::guest())
-            <li><a href="{{ URL::route('auth/register') }}">Register</a></li>
-            <li><a href="{{ URL::route('auth/login') }}">Sign In</a></li>
+            <!--<li><a href="{{ URL::route('auth/register') }}">Register</a></li>-->
+            <li><a href="{{ URL::route('auth/login') }}" style="color: #fbfbfb;">Ingresar</a></li>
+        @elseif(Auth::user()->name === 'Demo User')    
+            <li><a href="{{ route('poders.index') }}" style="color: #fbfbfb;">Poder especial</a></li>
+            <li><a href="{{ URL::route('auth/logout') }}" style="color: #fbfbfb;">Hola, {{{ Auth::user()->name}}} (Cerrar sesion)</a></li>
         @else
-            <li><a href="{{ route('home') }}">Home</a></li>
-            <li><a href="{{ route('tasks.index') }}">Tasks</a></li>
-            <li><a href="{{ route('documents.index') }}">Documents</a></li>
-            <li><a href="{{ URL::route('auth/logout') }}">Hi, {{{ Auth::user()->name}}} (Sign Out)</a></li>
+            <li><a href="{{ route('home') }}" style="color: #fbfbfb;">Home</a></li>
+            <li><a href="{{ route('tasks.index') }}" style="color: #fbfbfb;">Tasks</a></li>
+            <li><a href="{{ route('documents.index') }}" style="color: #fbfbfb;">Documents</a></li>
+            <li><a href="{{ route('poders.index') }}" style="color: #fbfbfb;">Poderes</a></li>
         @endif
     </div>
   </div>

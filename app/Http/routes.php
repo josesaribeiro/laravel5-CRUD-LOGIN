@@ -18,6 +18,8 @@ Route::group(['middleware' => 'auth'], function(){
     Route::resource('tasks', 'TasksController');
     Route::get('documents/download/{id}', 'DocumentsController@download')->name('documents.download');
     Route::resource('documents', 'DocumentsController');
+    Route::get('poders/download/{id}', 'PodersController@download')->name('poders.download');
+    Route::resource('poders', 'PodersController');
 });
 
 Route::get('hello', 'Hello@index');

@@ -17,6 +17,7 @@ class ComposerStaticInitb666150ae38619d3622923ae5afdaec4
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         '752af1c2bdb339e8474c3c31b22b7d54' => __DIR__ . '/..' . '/illuminate/html/helpers.php',
+        '6d394c3a532652dafb4dd296ba6a3f0b' => __DIR__ . '/../..' . '/app/Http/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -294,8 +295,9 @@ class ComposerStaticInitb666150ae38619d3622923ae5afdaec4
     );
 
     public static $classMap = array (
-        'CreateDocumentosTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_14_121550_create_documentos_table.php',
+        'CreateDocumentsTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_14_121550_create_documents_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+        'CreatePodersTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_15_175651_create_poders_table.php',
         'CreateTasksTable' => __DIR__ . '/../..' . '/database/migrations/2015_12_10_145054_create_tasks_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',

@@ -10,11 +10,11 @@
                         {!! Form::open(['route' => 'auth/login', 'class' => 'form']) !!}
                             <div class="form-group">
                                 <label>Email</label>
-                                {!! Form::email('email', '', ['class'=> 'form-control']) !!}
+                                {!! Form::email('email', '', ['class'=> 'form-control','placeholder' => 'demo@demo.com']) !!}
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                {!! Form::password('password', ['class'=> 'form-control']) !!}
+                                {!! Form::password('password', ['class'=> 'form-control','placeholder' => 'mandure']) !!}
                             </div>
                             <div class="checkbox">
                                 <label><input name="remember" type="checkbox"> Remember me</label>
